@@ -18,7 +18,7 @@ import { BalanceComponent } from './balance/balance.component';
 import { HistorialComponent } from './historial/historial.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { NotificationsComponent } from './notifications/notifications.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
     HistorialComponent,
     RutasComponent,
     NotificationsComponent,
-    UpgradeComponent
+    LogoutComponent
 
   ],
   imports: [

@@ -9,7 +9,7 @@ import { BalanceComponent } from './balance/balance.component';
 import { HistorialComponent } from './historial/historial.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { NotificationsComponent } from './notifications/notifications.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes =[
     { path: 'inicio',         component: InicioComponent },
@@ -18,7 +18,7 @@ const routes: Routes =[
     { path: 'historial',     component: HistorialComponent },
     { path: 'rutas',           component: RutasComponent },
     { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'logout',        component: LogoutComponent },
       { path: '',          redirectTo: 'inicio', pathMatch: 'full' }
 ];
 
