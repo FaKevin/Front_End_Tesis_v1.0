@@ -11,6 +11,7 @@ import { RutasComponent } from './rutas/rutas.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { LogoutComponent } from './logout/logout.component';
 
+
 const routes: Routes =[
     { path: 'inicio',         component: InicioComponent },
     { path: 'perfil',           component: PerfilComponent },

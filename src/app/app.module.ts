@@ -5,9 +5,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app.routing';
-import { NavbarModule } from './shared/navbar/navbar.module';
-import { FooterModule } from './shared/footer/footer.module';
-import { SidebarModule } from './sidebar/sidebar.module';
+//import { NavbarModule } from './shared/navbar/navbar.module';
+//import { FooterModule } from './shared/footer/footer.module';
+//import { SidebarModule } from './sidebar/sidebar.module';
 import { LbdModule } from './lbd/lbd.module';
 
 import { AppComponent } from './app.component';
@@ -19,6 +19,11 @@ import { HistorialComponent } from './historial/historial.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { LogoutComponent } from './logout/logout.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -29,16 +34,20 @@ import { LogoutComponent } from './logout/logout.component';
     HistorialComponent,
     RutasComponent,
     NotificationsComponent,
-    LogoutComponent
+    LogoutComponent,
+    SidebarComponent,
+    FooterComponent,
+    NavbarComponent
+
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    NavbarModule,
-    FooterModule,
-    SidebarModule,
+    //NavbarModule,
+    //FooterModule,
+    //SidebarModule,
     RouterModule,
     AppRoutingModule,
     LbdModule
