@@ -44,7 +44,7 @@
         @include opacity(1);
     }
     .content{
-        padding: 15px 15px 10px 15px;
+        padding: 5px 15px 5px 15px;
     }
     .header{
         padding: 15px 15px 0;
@@ -70,7 +70,7 @@
     .title{
         margin: $none;
         color: $black-color;
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-bold;
     }
     .avatar{
         width: 30px;
@@ -154,7 +154,7 @@
 }
 .card-user{
     .image{
-        height: 110px;
+        height: 220px;
     }
     .image-plain{
         height: 0;
@@ -163,21 +163,26 @@
     .author{
         text-align: center;
         text-transform: none;
-        margin-top: -70px;
+        //margin-top: -70px;
     }
     .avatar{
-        width: 124px;
-        height: 124px;
+        width: 200px;
+        height: 200px;
         border: 5px solid #FFFFFF;
         position: relative;
         margin-bottom: 15px;
+        border-radius: 0%;
         
         &.border-gray{
             border-color: #EEEEEE;
         }
     }
     .title{
+
         line-height: 24px;
+        margin-bottom: 15px;
+        font-weight: $font-weight-normal;
+
     }
     .content{
         min-height: 240px;

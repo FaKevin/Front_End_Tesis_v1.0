@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app.routing';
 //import { FooterModule } from './shared/footer/footer.module';
 //import { SidebarModule } from './sidebar/sidebar.module';
 import { LbdModule } from './lbd/lbd.module';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 
@@ -22,6 +23,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+
+import { UserService } from './services/user.service';
 
 
 
@@ -50,9 +53,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     //SidebarModule,
     RouterModule,
     AppRoutingModule,
-    LbdModule
+    LbdModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,7 +20,7 @@ const routes: Routes =[
     { path: 'rutas',           component: RutasComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'logout',        component: LogoutComponent },
-      { path: '',          redirectTo: 'inicio', pathMatch: 'full' }
+    { path: '',          redirectTo: 'inicio', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -29,7 +29,7 @@ const routes: Routes =[
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [
+  exports: [RouterModule
   ],
 })
 export class AppRoutingModule { }
