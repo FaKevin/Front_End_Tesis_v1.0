@@ -8,6 +8,7 @@
 5. Then: ```npm install```
 6. And: ```ng serve```
 7. Navigate to `http://localhost:4200/`.
+
 OPTIONAL----- if you need to edite ssass files por styless of light-bootstrap-dashboard.css.
 8. Install SASS (http://sass-lang.com/install)
 9. locate with terminal in "Front_End_Tesis_v1.0\src\assets\sass>sass"
