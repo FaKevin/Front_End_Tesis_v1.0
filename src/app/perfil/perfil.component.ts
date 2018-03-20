@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from '../model/user';
 import { UserService } from '../services/user.service';
 
@@ -8,16 +9,39 @@ import { UserService } from '../services/user.service';
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent implements OnInit {
-  userlist: User[] = [];
-  myUserService: UserService;
 
-  constructor(userService: UserService) {
-    this.myUserService = userService;
-  }
+export class PerfilComponent implements OnInit {
+  username: string="admin";
+  userViewed: User = {
+    name: "",
+    lastname: "",
+    username: "",
+    f_create:"",
+    birth: "",
+    state: "",
+    city: "",
+    address: "",
+    telephone: "",
+    cellphone:"",
+    brand: "",
+    year: "",
+    model:"",
+    car_plate: ""
+  };
+
+  constructor(
+    private activateroute: ActivatedRoute,
+    private userservice: UserService) {}
 
   ngOnInit() {
-    this.userlist = this.myUserService.getUserList();
-  }
+    this.userservice.getUserByUsername(this.username)
+    .subscribe(
+      (response) => {
+        this.userViewed = response.data;
+      }, (error) => {
+        console.log('Error: ', error);
+      }
+    );
 
+   }
 }

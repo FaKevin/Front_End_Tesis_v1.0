@@ -3,10 +3,10 @@ export interface User {
     name: string,
     lastname: string,
     username?: string,
-    password?:string;
-    f_create:string;
+    password?:string,
+    f_create:string,
     photo?: string,
-    birth: string;
+    birth: string,
     state: string,
     city: string,
     address: string,

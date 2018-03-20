@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app.routing';
 //import { SidebarModule } from './sidebar/sidebar.module';
 import { LbdModule } from './lbd/lbd.module';
 import { HttpClientModule } from '@angular/common/http'
+import { Ng2SmartTableModule } from '../ng2-smart-table';
 
 import { AppComponent } from './app.component';
 
@@ -54,7 +55,8 @@ import { UserService } from './services/user.service';
     RouterModule,
     AppRoutingModule,
     LbdModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SmartTableModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
