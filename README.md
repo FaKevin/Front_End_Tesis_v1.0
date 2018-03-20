@@ -10,6 +10,7 @@
 7. Navigate to `http://localhost:4200/`.
 
 OPTIONAL----- if you need to edite ssass files por styless of light-bootstrap-dashboard.css.
+
 8. Install SASS (http://sass-lang.com/install)
 9. locate with terminal in "Front_End_Tesis_v1.0\src\assets\sass>sass"
 10. execute sass --watch light-bootstrap-dashboard.scss:../css/light-bootstrap-dashboard.css
@@ -24,10 +25,15 @@ Within the download you'll find the following directories and files: ()
 ```
 ## Useful Links
 
-Special thanks to creative tim : <https://www.creative-tim.com/bootstrap-themes>.
-Github of official template: <https://github.com/creativetimofficial/light-bootstrap-dashboard-angular>.
-Live preview official template: <http://lbd-angular2.creative-tim.com/dashboard>.
-Bootstrap 4.0 page: <https://getbootstrap.com/docs/4.0/getting-started/introduction/>.
-w3schools for reference Bootstrap: <https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp>.
+Special thanks to creative tim : <https://www.creative-tim.com/bootstrap-themes>
+
+Github of official template: <https://github.com/creativetimofficial/light-bootstrap-dashboard-angular>
+
+Live preview official template: <http://lbd-angular2.creative-tim.com/dashboard>
+
+Bootstrap 4.0 page: <https://getbootstrap.com/docs/4.0/getting-started/introduction/>
+
+w3schools for reference Bootstrap: <https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp>
+
 
 
