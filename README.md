@@ -35,5 +35,7 @@ Bootstrap 4.0 page: <https://getbootstrap.com/docs/4.0/getting-started/introduct
 
 w3schools for reference Bootstrap: <https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp>
 
+gn2-smart-table: <https://akveo.github.io/ng2-smart-table/#/demo>
+
 
 

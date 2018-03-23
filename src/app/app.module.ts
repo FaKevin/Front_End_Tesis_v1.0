@@ -26,6 +26,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { UserService } from './services/user.service';
+import { TicketService } from './services/ticket.service';
 
 
 
@@ -58,7 +59,7 @@ import { UserService } from './services/user.service';
     HttpClientModule,
     Ng2SmartTableModule
   ],
-  providers: [UserService],
+  providers: [UserService,TicketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
