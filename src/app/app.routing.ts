@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { BalanceComponent } from './balance/balance.component';
+import { BalanceAdmComponent } from './balanceAdm/balanceAdm.component';
 import { HistorialComponent } from './historial/historial.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -16,6 +17,7 @@ const routes: Routes =[
     { path: 'inicio',         component: InicioComponent },
     { path: 'perfil',           component: PerfilComponent },
     { path: 'balance',          component: BalanceComponent },
+    { path: 'balanceAdm',        component: BalanceAdmComponent },
     { path: 'historial',     component: HistorialComponent },
     { path: 'rutas',           component: RutasComponent },
     { path: 'notifications',  component: NotificationsComponent },

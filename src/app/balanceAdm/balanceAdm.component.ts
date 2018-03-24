@@ -4,22 +4,36 @@ import { TicketService } from '../services/ticket.service';
 import { Router } from '@angular/router';
 import { LocalDataSource } from '../../ng2-smart-table';
 
-declare interface BalanceData {
+declare interface BalanceAdmData {
 }
 
 @Component({
-  selector: 'app-balance',
-  templateUrl: './balance.component.html',
-  styleUrls: ['./balance.component.css']
+  selector: 'app-balanceAdm',
+  templateUrl: './balanceAdm.component.html',
+  styles: [],
 })
-export class BalanceComponent implements OnInit {
+export class BalanceAdmComponent implements OnInit {
+  
   source: LocalDataSource;
   Data=[];
   settings = {
+    add: {
+      addButtonContent: '<i class="fas fa-user-plus"></i>',
+      createButtonContent: '<i class="fas fa-check"></i',
+      cancelButtonContent: '<i class="fas fa-times"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="fas fa-edit"></i>',
+      saveButtonContent: '<i class="fas fa-check"></i>',
+      cancelButtonContent: '<i class="fas fa-times"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="fas fa-trash"></i>',
+      confirmDelete: true,
+    },
       columns: {
-       
         date: {
-          title: 'Fecha',
+          title: '    Fecha',
           editable : false          
         },
         num: {
@@ -40,15 +54,15 @@ export class BalanceComponent implements OnInit {
         },
         debt: {
           title: 'Estado',
-          editable : false
+          editable : true
         }
       },
       actions:{
-        add: false,
-        edit: false,
-        delete : false
-      },
-      mode : 'external'
+        position :'right'
+        //add: false,
+       // delete: false
+      }
+     // mode : 'external'
   };
 
 

@@ -12,6 +12,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'perfil', title: 'Perfil',  icon:'pe-7s-user', class: '' },
     { path: 'rutas', title: 'Rutas',  icon:'pe-7s-way', class: '' },
     { path: 'balance', title: 'Balance',  icon:'pe-7s-note2', class: '' },
+    { path: 'balanceAdm', title: 'BalanceAdm',  icon:'pe-7s-note2', class: '' },
     { path: 'historial', title: 'Historial',  icon:'pe-7s-map-marker', class: '' },
     { path: 'logout', title: 'logout',  icon:'pe-7s-power', class: 'active-pro' },
 ];

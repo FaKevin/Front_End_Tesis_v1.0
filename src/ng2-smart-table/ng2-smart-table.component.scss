@@ -1,5 +1,7 @@
 :host {
   font-size: 1.8rem;
+  //text-align:  center;
+  
 
   /deep/ {
     * {
@@ -26,20 +28,28 @@
       overflow: auto;
       word-break: normal;
       word-break: keep-all;
+      
 
       tr {
         th {
           font-weight: bold;
+
         }
         section {
           font-size: .75em;
           font-weight: bold;
+          
         }
         td,
         th {
+          text-align:  center;
           font-size: .875em;
-          margin: 0;
-          padding: 0.5em 1em;
+          margin-left: 100px;
+          padding-top: 0.5em;
+          padding-right: 0.5em;
+          padding-bottom: 0.5em;
+          padding-left: 0.5em;
+          
         }
       }
     }
@@ -47,6 +57,9 @@
     a {
       color: #1e6bb8;
       text-decoration: none;
+     // margin-left: 7%;
+      //padding: 0em 0em 0em 0.1em;
+      text-align:  center;
       &:hover {
         text-decoration: underline;
       }
