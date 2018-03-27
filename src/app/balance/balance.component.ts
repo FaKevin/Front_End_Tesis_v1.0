@@ -48,7 +48,10 @@ export class BalanceComponent implements OnInit {
         edit: false,
         delete : false
       },
-      mode : 'external'
+      mode : 'external',
+      pager:{
+        perPage:15,
+      }
   };
 
 
@@ -64,12 +67,13 @@ export class BalanceComponent implements OnInit {
             for(var j=0;j<response.data[i].schedule.length;j++)
             {
               var fecha = new Date (String(response.data[i].date));
-              //var hora = new Date(String(response.data[i].schedule[j].hour));
-              //console.log(hora);          toLocaleTimeString();
+              var hora = new Date(String(response.data[i].schedule[j].hour));
+              var fechac=fecha.getFullYear()+"/"+fecha.getMonth()+"/"+fecha.getDay();
               var post = {
-                date: fecha.toLocaleDateString(),
+                //date: fecha.toLocaleDateString(),
+                date: fechac,
                 num: response.data[i].num,
-                hour: response.data[i].schedule[j].hour,
+                hour: hora.toLocaleTimeString(),
                 nstop:response.data[i].schedule[j].nstop,
                 cash:response.data[i].schedule[j].cash,
                 debt:response.data[i].schedule[j].debt,
