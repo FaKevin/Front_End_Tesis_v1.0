@@ -4,9 +4,6 @@ import { TicketService } from '../services/ticket.service';
 import { Router } from '@angular/router';
 import { LocalDataSource } from '../../ng2-smart-table';
 
-declare interface BalanceData {
-}
-
 @Component({
   selector: 'app-balance',
   templateUrl: './balance.component.html',
@@ -68,7 +65,8 @@ export class BalanceComponent implements OnInit {
             {
               var fecha = new Date (String(response.data[i].date));
               var hora = new Date(String(response.data[i].schedule[j].hour));
-              var fechac=fecha.getFullYear()+"/"+fecha.getMonth()+"/"+fecha.getDay();
+              var month = fecha.getMonth()+1;
+              var fechac=fecha.getFullYear()+"/"+month+"/"+fecha.getDate();
               var post = {
                 //date: fecha.toLocaleDateString(),
                 date: fechac,
@@ -81,7 +79,7 @@ export class BalanceComponent implements OnInit {
               this.Data.push(post);
             }
           }
-          console.log(this.Data);
+          //console.log(this.Data);
           this.source.load(this.Data);
         }, (error) => {
           console.log('Error: ', error);

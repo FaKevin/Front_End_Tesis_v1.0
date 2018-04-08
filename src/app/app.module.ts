@@ -23,13 +23,16 @@ import { RutasComponent } from './rutas/rutas.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-
 import { UserService } from './services/user.service';
 import { TicketService } from './services/ticket.service';
+import { UsersComponent } from './users/users.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
-
+import { AgmCoreModule } from '@agm/core';
+import { HistorialViewComponent } from './historial-view/historial-view.component';///google maps 
+import { GpsService} from './services/gps.service';
 
 
 @NgModule({
@@ -44,10 +47,12 @@ import { TicketService } from './services/ticket.service';
     NotificationsComponent,
     LogoutComponent,
     SidebarComponent,
-    FooterComponent,
-    NavbarComponent
-
-
+    NavbarComponent,
+    UsersComponent,
+    UsersComponent,
+    UserViewComponent,
+    UserEditComponent,
+    HistorialViewComponent
   ],
   imports: [
     BrowserModule,
@@ -60,9 +65,12 @@ import { TicketService } from './services/ticket.service';
     AppRoutingModule,
     LbdModule,
     HttpClientModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDsmByz8cVof9beZ85HOTNUh-_H9qwJ36Q'
+    })
   ],
-  providers: [UserService,TicketService],
+  providers: [UserService,TicketService,GpsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

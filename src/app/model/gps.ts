@@ -1,7 +1,8 @@
-export interface Ticket {
+export interface Gps {
     _id?: string,
     username: string,
     date:Date,
     num:string,
-    schedule: [{any : {}}]
+    location: [{any : {}}],
+    deleted?:boolean
   }

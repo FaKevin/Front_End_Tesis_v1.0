@@ -11,7 +11,7 @@ import { UserService } from '../services/user.service';
 })
 
 export class PerfilComponent implements OnInit {
-  username: string="admin";
+  username: string="vane";
   userViewed: User = {
     name: "",
     lastname: "",
@@ -34,9 +34,14 @@ export class PerfilComponent implements OnInit {
     private userservice: UserService) {}
 
   ngOnInit() {
-    this.userservice.getUserByUsername(this.username)
-    .subscribe(
+    this.userservice.getUserByUsername(this.username).subscribe(
       (response) => {
+        var f_create = new Date (String(response.data.f_create));
+        var month = f_create.getMonth()+1;
+        response.data.f_create =f_create.getFullYear()+"/"+month+"/"+f_create.getDate();
+        var birth = new Date (String(response.data.birth));
+        month = birth.getMonth()+1;
+        response.data.birth = birth.getFullYear()+"/"+month+"/"+birth.getDate();
         this.userViewed = response.data;
       }, (error) => {
         console.log('Error: ', error);

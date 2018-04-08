@@ -5,8 +5,6 @@ import { Router } from '@angular/router';
 import { LocalDataSource } from '../../ng2-smart-table';
 import { Debt } from '../model/debt';
 
-declare interface BalanceAdmData {
-}
 
 @Component({
   selector: 'app-balanceAdm',
@@ -25,7 +23,6 @@ export class BalanceAdmComponent implements OnInit {
       createButtonContent: '<i class="fas fa-check"></i',
       cancelButtonContent: '<i class="fas fa-times"></i>',
       confirmSave: true,
-      
     },
     edit: {
       editButtonContent: '<i class="fas fa-edit"></i>',
@@ -70,27 +67,14 @@ export class BalanceAdmComponent implements OnInit {
         },
       },
       actions:{
-        position :'right'
-       // delete: false
+        position :'right',
+        add: false
       }
   };
 
 
   constructor(private ticketservice: TicketService,
     private router: Router) {  this.source = new LocalDataSource()}
-
-    
-  onSaveConfirm(event) {
-      this.deuda.debt=event.newData.debt;
-      this.ticketservice.putTicket(this.deuda,"admin",event.newData.date,event.newData.num,event.newData.nstop).subscribe(
-        (response)=>{
-          event.confirm.resolve(event.newData);
-        },(error)=>{
-          console.log('Error: ', error);
-          event.confirm.reject();
-        }
-      )
-  }
   
   ngOnInit() {
     
@@ -120,11 +104,18 @@ export class BalanceAdmComponent implements OnInit {
         }, (error) => {
           console.log('Error: ', error);
         }
-      );
-  
-  
-  
-  
-  
+      );  
+  }
+
+  onSaveConfirm(event) {
+    this.deuda.debt=event.newData.debt;
+    this.ticketservice.putTicket(this.deuda,"admin",event.newData.date,event.newData.num,event.newData.nstop).subscribe(
+      (response)=>{
+        event.confirm.resolve(event.newData);
+      },(error)=>{
+        console.log('Error: ', error);
+        event.confirm.reject();
+      }
+    )
   }
 }

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-declare const google: any;
+declare var google: any;
 interface Marker {
-lat: number;
-lng: number;
-label?: string;
-draggable?: boolean;
+    lat: number;
+    lng: number;
+    label?: string;
+    draggable?: boolean;
 }
 @Component({
   selector: 'app-rutas',

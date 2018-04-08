@@ -1,0 +1,6 @@
+<agm-map >
+    <agm-polyline *ngFor="let polyline of polylines;let i = index;">
+        <agm-polyline-point *ngFor="let point of polyline.path" [latitude]="point.latitude" [longitude]="point.longitude">
+        </agm-polyline-point>
+    </agm-polyline>
+</agm-map>
