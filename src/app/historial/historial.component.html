@@ -11,6 +11,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12" *ngFor="let i of polylines">
+                <h1>vuelta </h1>
+                <agm-map *ngIf="info">
+                    <agm-polyline>
+                        <agm-polyline-point *ngFor="let point of i" [latitude]="point.lat" [longitude]="point.long">
+                        </agm-polyline-point>
+                    </agm-polyline>
+                </agm-map>
+            </div>
         </div>
     </div>
   </div>

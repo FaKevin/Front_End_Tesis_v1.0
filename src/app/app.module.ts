@@ -20,7 +20,6 @@ import { BalanceComponent } from './balance/balance.component';
 import { BalanceAdmComponent } from './balanceAdm/balanceAdm.component';
 import { HistorialComponent } from './historial/historial.component';
 import { RutasComponent } from './rutas/rutas.component';
-import { NotificationsComponent } from './notifications/notifications.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -30,10 +29,9 @@ import { UsersComponent } from './users/users.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 
-import { AgmCoreModule } from '@agm/core';
-import { HistorialViewComponent } from './historial-view/historial-view.component';///google maps 
+import { AgmCoreModule } from '@agm/core'; 
 import { GpsService} from './services/gps.service';
-
+import { HistorialViewComponent } from './historial-view/historial-view.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +42,6 @@ import { GpsService} from './services/gps.service';
     BalanceAdmComponent,
     HistorialComponent,
     RutasComponent,
-    NotificationsComponent,
     LogoutComponent,
     SidebarComponent,
     NavbarComponent,

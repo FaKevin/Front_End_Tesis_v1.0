@@ -28,6 +28,8 @@ export class TicketService {
   }
 
   putTicket(data: Debt, username: string, datee: string, num: string, nstop: string): Observable<any> {
+    console.log('service',username);
+    console.log('service',datee);
     const http_Headers = {
       headers: new HttpHeaders({
         'username': username,
