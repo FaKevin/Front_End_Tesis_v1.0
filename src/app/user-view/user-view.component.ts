@@ -58,5 +58,11 @@ export class UserViewComponent implements OnInit {
   editUser(username): void {
     this.router.navigate(['users',this.userViewed.username,'edit']);
     }
+  deleteUser(username): void {
+    this.userservice.deleteUser(this.userViewed.username).subscribe((response)=>{console.log(response)},
+    (error)=>{console.log('Error init:', error)});
+    this.router.navigate(['users']);
+   // this.router.navigate(['users',this.userViewed.username,'edit']);
+    }
 
 }

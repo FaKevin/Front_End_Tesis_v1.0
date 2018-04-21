@@ -10,10 +10,10 @@ import { BalanceComponent } from './balance/balance.component';
 import { BalanceAdmComponent } from './balanceAdm/balanceAdm.component';
 import { HistorialComponent } from './historial/historial.component';
 import { RutasComponent } from './rutas/rutas.component';
-import { LogoutComponent } from './logout/logout.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { HistorialViewComponent } from './historial-view/historial-view.component';
+import { LoginComponent } from './login/login.component'
 
 const routes: Routes =[
     { path: 'inicio',               component: InicioComponent },
@@ -27,7 +27,7 @@ const routes: Routes =[
     { path: 'historial',            component: HistorialComponent },//auth
     { path: 'historial/view',            component: HistorialViewComponent },//auth
     { path: 'rutas',                component: RutasComponent },
-    { path: 'logout',               component: LogoutComponent },
+    { path: 'login',               component: LoginComponent },
     { path: '',                     redirectTo: 'inicio', pathMatch: 'full' },
 
 ];
