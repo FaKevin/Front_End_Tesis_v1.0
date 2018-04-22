@@ -28,5 +28,9 @@ export class UserService {
 
   editeUser(username: string, editUser:User):Observable<any>{
     return this.myHttpClient.put(`${userApiUrl}/${username}`,editUser)
-  } 
+  }
+  
+  deleteUser(username: string): Observable<any> {
+    return this.myHttpClient.delete(`${userApiUrl}/${username}`);
+  }
 }

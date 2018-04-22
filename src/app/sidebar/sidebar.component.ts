@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 declare const $: any;
 declare interface RouteInfo {
     path: string;
@@ -15,7 +15,8 @@ export const ROUTES: RouteInfo[] = [
     { path: 'balance', title: 'Balance',  icon:'pe-7s-note2', class: '' },
     { path: 'balanceAdm', title: 'BalanceAdm',  icon:'pe-7s-note2', class: '' },
     { path: 'historial', title: 'Historial',  icon:'pe-7s-map-marker', class: '' },
-    { path: 'logout', title: 'logout',  icon:'pe-7s-power', class: 'active-pro' },
+    { path: 'inicio', title: 'logout',  icon:'pe-7s-power', class: 'active-pro' },
+    { path: 'login', title: 'login',  icon:'pe-7s-users', class: 'active-pro' },
 ];
 
 @Component({
@@ -23,12 +24,13 @@ export const ROUTES: RouteInfo[] = [
   templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent implements OnInit {
-  menuItems: any[];
+ sessionstorage= sessionStorage.getItem('token');
+  menuItems = ROUTES.filter(menuItem => menuItem);
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+      //console.log('sessionStorage: ',this.sessionstorage);
   }
   isMobileMenu() {
       if ($(window).width() > 991) {
@@ -36,4 +38,13 @@ export class SidebarComponent implements OnInit {
       }
       return true;
   };
+  logout(): void {
+    //console.log('respuestaa: ',response);
+    sessionStorage.removeItem('token');
+    this.router.navigate(['inicio']);  
+  }
+  login(): void {
+    this.router.navigate(['login']);  
+
+  }
 }

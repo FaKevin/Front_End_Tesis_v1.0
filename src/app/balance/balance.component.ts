@@ -10,6 +10,7 @@ import { LocalDataSource } from '../../ng2-smart-table';
   styleUrls: ['./balance.component.css']
 })
 export class BalanceComponent implements OnInit {
+  username="admin";
   source: LocalDataSource;
   Data=[];
   settings = {
@@ -57,7 +58,7 @@ export class BalanceComponent implements OnInit {
 
   ngOnInit() {
     
-    this.ticketservice.getTicketList("admin","2018/03/30","2018/01/30")
+    this.ticketservice.getTicketList(this.username,"2018/03/30","2018/01/30")
       .subscribe(
         (response) => {     
           for(var i=0;i<response.data.length;i++){

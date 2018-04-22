@@ -24,4 +24,16 @@ export class GpsService {
     return this.myHttpClient.get(`${userApiUrl}/list`,http_Headers);
   }
 
+  getGpsDay(username: string,date:string): Observable<any> {
+    console.log('service',username);
+    console.log('service',date);
+    const http_Headers = {
+      headers: new HttpHeaders({
+        'username': username,
+        'ddate':date
+      })
+    };
+    return this.myHttpClient.get(`${userApiUrl}/list/day`,http_Headers);
+  }
+
 }
